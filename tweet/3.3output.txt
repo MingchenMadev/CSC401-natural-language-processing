@@ -1,0 +1,69 @@
+train500.arff
+=== Attribute Selection on all input data ===
+
+Search Method:
+        Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 21 class):
+        Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.02916    1 First person pronouns
+ 0.02697   19 Average length of tokens
+ 0.01918   14 Adverbs
+ 0.01342    2 Second person pronouns
+ 0.0085     4 Coordinating conjunctions
+ 0          7 Commas
+ 0          8 Colons and semi-colons
+ 0          9 Dashes
+ 0          3 Third person pronouns
+ 0          6 Future-tense verbs
+ 0          5 Past-tense verbs
+ 0         17 Words all in upper case
+ 0         16 Modern slang acronyms
+ 0         20 Number of sentences
+ 0         18 Average length of sentences
+ 0         11 Ellipses
+ 0         10 Parentheses
+ 0         15 wh-words
+ 0         12 Common nouns
+ 0         13 Proper nouns
+
+Selected attributes: 1,19,14,2,4,7,8,9,3,6,5,17,16,20,18,11,10,15,12,13 : 20
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+        Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 21 class):
+        Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.022311    1 First person pronouns
+ 0.01954    19 Average length of tokens
+ 0.019308    2 Second person pronouns
+ 0.009368   18 Average length of sentences
+ 0.009131   14 Adverbs
+ 0.005659    5 Past-tense verbs
+ 0.004128   12 Common nouns
+ 0.002122   11 Ellipses
+ 0.002085   20 Number of sentences
+ 0.001807    9 Dashes
+ 0.001286   17 Words all in upper case
+ 0.001057    3 Third person pronouns
+ 0.000693    4 Coordinating conjunctions
+ 0.000633   16 Modern slang acronyms
+ 0          10 Parentheses
+ 0          15 wh-words
+ 0          13 Proper nouns
+ 0           6 Future-tense verbs
+ 0           8 Colons and semi-colons
+ 0           7 Commas
+
+Selected attributes: 1,19,2,18,14,5,12,11,20,9,17,3,4,16,10,15,13,6,8,7 : 20
+
+feature 1, 2, 19 remail the same rank between different size of training size.
+This means first/second person pronouns and average length of tokens are strong
+indicator of polarity.

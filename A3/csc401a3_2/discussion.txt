@@ -1,0 +1,253 @@
+Discussion:
+
+2.3 Experiments and discussion
+
+Experiments results:
+
+M -- S -- e -- accuracy
+8    30   0.5  100%
+4    30   0.5  93.33%
+8    10   0.5  46.667%
+8    30   10   86.67%
+
+From this table we find the accuracy increase as M, S increase, eplison decreases.
+
+a) How might you improve the classification accuracy of the Gaussian mixtures, without adding more training data?
+
+The non-ideal cov matrix should be included.
+
+b) When would your classifier decide that a given test utterance comes from none of the trained speaker models, and how would your classifier come to this decision?
+
+Given the sample size and training size, we can make null hypothesis and calculate our confidence interval based on that.
+
+c) Can you think of some alternative methods for doing speaker identification that don’t use Gaussian mixtures?
+
+Convolutional neural network.
+
+3.2 Experiment and discussion:
+
+I trained the whole set of data and it took me a whole night. The overall accurate is 38.34%. To save sometime, I only trained 1K or 500 rows per phoneme, and get the following results.
+
+M -- D -- Q -- T -- Accuracy
+8    14   3    5H   26.34%
+8    14   3    1K   28.43%
+8    14   2    5H   24.21%
+8    14   2    1K   25.32%
+8    8    3    5H   22.32%
+8    8    3    1K   23.76%
+8    8    2    5H   21.88%
+8    8    2    1K   23.33%
+4    14   3    5H   19.23%
+4    14   3    1K   20.45%
+4    14   2    5H   18.34%
+4    14   2    1K   18.99%
+4    8    3    5H   16.43%
+4    8    3    1K   17.88%
+4    8    2    5H   16.03%
+4    8    2    1K   18.44%
+
+From the table, I can tell as M, D, Q and T increase, the accuracy increase. This makes sense because we are providing more rich data, more states and more mixtures per state. 
+
+Interstingly, M and D increase will lead to larger increase than Q and T.
+
+Results for Part3.3:
+----------------------------
+>>testing 1 sentence:
+hypo: Now here is truly hey marvel.
+ref: Now here is truly a marvel.
+Substitution: 0.166667
+Insert: 0.000000
+Delete: 0.000000
+>>testing 2 sentence:
+hypo: Cat tune features a muskrat and a tadpole.
+ref: The cartoon features a muskrat and a tadpole.
+Substitution: 0.250000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 3 sentence:
+hypo: Just let me die in peace.
+ref: Just let me die in peace.
+Substitution: 0.000000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 4 sentence:
+hypo: The sculptor looked at him, bug I'd and amazed, angry.
+ref: The sculptor looked at him, bugeyed and amazed, angry.
+Substitution: 0.111111
+Insert: 0.111111
+Delete: 0.000000
+>>testing 5 sentence:
+hypo: A flash illuminated the trees as crook bolt tweaked several directions.
+ref: A flash illumined the trees as a crooked bolt twigged in several directions.
+Substitution: 0.230769
+Insert: 0.000000
+Delete: 0.153846
+>>testing 6 sentence:
+hypo: This is particularly true sight selection.
+ref: This is particularly true in site selection.
+Substitution: 0.142857
+Insert: 0.000000
+Delete: 0.142857
+>>testing 7 sentence:
+hypo: We would lose sour expert markets deny ourselves the imports we need.
+ref: We would lose our export markets and deny ourselves the imports we need.
+Substitution: 0.153846
+Insert: 0.000000
+Delete: 0.076923
+>>testing 8 sentence:
+hypo: Compton number of teaspoons of so he sauce that you add.
+ref: Count the number of teaspoons of soysauce that you add.
+Substitution: 0.200000
+Insert: 0.200000
+Delete: 0.100000
+>>testing 9 sentence:
+hypo: Finally he asked, do you object to petting?
+ref: Finally he asked, do you object to petting?
+Substitution: 0.000000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 10 sentence:
+hypo: Draw every other line first, then fill into interior.
+ref: Draw every outer line first, then fill in the interior.
+Substitution: 0.200000
+Insert: 0.000000
+Delete: 0.100000
+>>testing 11 sentence:
+hypo: Change involves the displacement of fawn.
+ref: Change involves the displacement of form.
+Substitution: 0.166667
+Insert: 0.000000
+Delete: 0.000000
+>>testing 12 sentence:
+hypo: Two is puzzle mint, there suddenly was no haze.
+ref: To his puzzlement, there suddenly was no haze.
+Substitution: 0.375000
+Insert: 0.125000
+Delete: 0.000000
+>>testing 13 sentence:
+hypo: Donna's me to carry oily rag like that.
+ref: Don't ask me to carry an oily rag like that.
+Substitution: 0.100000
+Insert: 0.000000
+Delete: 0.200000
+>>testing 14 sentence:
+hypo: The the full moon shone brightly that night.
+ref: The full moon shone brightly that night.
+Substitution: 0.000000
+Insert: 0.142857
+Delete: 0.000000
+>>testing 15 sentence:
+hypo: Tugboats are capable falling huge loads.
+ref: Tugboats are capable of hauling huge loads.
+Substitution: 0.142857
+Insert: 0.000000
+Delete: 0.142857
+>>testing 16 sentence:
+hypo: Did tatoo academic bidding?
+ref: Did dad do academic bidding?
+Substitution: 0.200000
+Insert: 0.000000
+Delete: 0.200000
+>>testing 17 sentence:
+hypo: See add your dark suit and greasy wash water all year.
+ref: She had your dark suit in greasy wash water all year.
+Substitution: 0.272727
+Insert: 0.000000
+Delete: 0.000000
+>>testing 18 sentence:
+hypo: The thick forest was nearly over helmed by Dutch Elm Disease.
+ref: The thick elm forest was nearly overwhelmed by Dutch Elm Disease.
+Substitution: 0.090909
+Insert: 0.090909
+Delete: 0.090909
+>>testing 19 sentence:
+hypo: Cow ten number of teaspoons of soysauce that you add.
+ref: Count the number of teaspoons of soysauce that you add.
+Substitution: 0.200000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 20 sentence:
+hypo: Norwegian sweaters are made of lamb's wool.
+ref: Norwegian sweaters are made of lamb's wool.
+Substitution: 0.000000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 21 sentence:
+hypo: We think differently.
+ref: We think differently.
+Substitution: 0.000000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 22 sentence:
+hypo: A too pays too should be squeezed from the bottom.
+ref: A toothpaste tube should be squeezed from the bottom.
+Substitution: 0.222222
+Insert: 0.111111
+Delete: 0.000000
+>>testing 23 sentence:
+hypo: Ran away on a black night with an awful wedded man.
+ref: Ran away on a black night with a lawful wedded man.
+Substitution: 0.181818
+Insert: 0.000000
+Delete: 0.000000
+>>testing 24 sentence:
+hypo: Down ask me to carry an oily rag like that.
+ref: Don't ask me to carry an oily rag like that.
+Substitution: 0.100000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 25 sentence:
+hypo: Don't ask me to carry an oily rag like that.
+ref: Don't ask me to carry an oily rag like that.
+Substitution: 0.000000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 26 sentence:
+hypo: Index words an electronic switches may be reserved in the following way.
+ref: Index words and electronic switches may be reserved in the following ways.
+Substitution: 0.166667
+Insert: 0.000000
+Delete: 0.000000
+>>testing 27 sentence:
+hypo: The avalanche triggered minor earth way.
+ref: The avalanche triggered a minor earthquake.
+Substitution: 0.500000
+Insert: 0.000000
+Delete: 0.000000
+>>testing 28 sentence:
+hypo: Donna's me to carry an oily rag like that.
+ref: Don't ask me to carry an oily rag like that.
+Substitution: 0.100000
+Insert: 0.000000
+Delete: 0.100000
+>>testing 29 sentence:
+hypo: The thick elm for his was nail he over well bye touch Elm Disease.
+ref: The thick elm forest was nearly overwhelmed by Dutch Elm Disease.
+Substitution: 0.454545
+Insert: 0.272727
+Delete: 0.000000
+>>testing 30 sentence:
+hypo: When hall else fails, use forks.
+ref: When all else fails, use force.
+Substitution: 0.333333
+Insert: 0.000000
+Delete: 0.000000
+
+se =
+
+    0.1731
+
+
+ie =
+
+    0.0385
+
+
+de =
+
+    0.0462
+
+
+lev_dist =
+
+    0.2577

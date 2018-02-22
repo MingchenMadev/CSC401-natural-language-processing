@@ -1,0 +1,26 @@
+Classifier:  weka.classifiers.functions.SMO
+Training Size | Test Accuracy
+500             53.2033
+1000            50.4178
+1500            52.9248
+2000            54.3175 
+2500            53.2033
+3000            52.9248
+3500            54.039
+4000            54.039
+4500            54.039
+5000            53.2033  
+5500            52.9248
+6000            53.4819    
+6500            52.6462
+7000            52.9248    
+7500            53.4819  
+8000            53.4819    
+8500            54.3175    
+9000            54.3175   
+9500            54.039  
+10000           53.7604     
+
+The test accuracy is not stable and falls in range of 50% to 54%.
+But as training size increase, the test accuracy falls more to ~54%, which proved
+that training size has some effect on the accuracy.

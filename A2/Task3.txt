@@ -1,0 +1,15 @@
+	MLE                 theta = 0.2         theta = 0.4         theta = 0.6         theta = 0.8
+e	13.7807799448714	65.8717781252778	83.1396839114572	97.1392871976336	109.434951651402
+f	13.1660143864840	73.1067524956457	95.0413781731342	113.078288417097	129.087029505705
+
+Please refer to Task3.m for scripts.
+
+At first I tried theta as 0.2, 0.4, 0.6, 0.8 but the perplexity goes higher, kind of contradiction
+of what we want. Later I realize that the dictionary size is 29640, which means choose a large theta
+is not a best practice. So I tried on theta = 0.01, theta = 0.001 and theta = 0.0001 to get the following results:
+
+	MLE                 theta = 0.01        theta = 0.001       theta = 0.0001      theta = 0.00001
+e	13.7807799448714	54.3673424262348	37.4611604700451	34.9803556625050	37.7318128966702
+f	13.1660143864840	58.6720772472192	37.2149920239571	32.8498684427404	34.4514793935417
+
+I saw a decrease from 0.01 to 0.001, so I guess the optimal theta value is between 0.01 to 0.00001. Of course, it dependents on the size of vocaburary.
